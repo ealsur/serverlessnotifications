@@ -1,0 +1,7 @@
+{
+  "itemDisplayName": "Provision a Function App that will connect to Azure SignalR and Azure Cosmos DB",
+  "description": "This template deploys a Function App hosted in a new dedicated App Service Plan. You will need an existing Azure SignalR service and Azure Cosmos DB service to load the connection strings.",
+  "summary": "Provision a Function App that will connect to Azure SignalR and Azure Cosmos DB",
+  "githubUsername": "ealsur",
+  "dateUpdated": "2018-05-11"
+}

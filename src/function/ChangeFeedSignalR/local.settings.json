@@ -1,0 +1,9 @@
+{
+    "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "AzureWebJobsDashboard": "UseDevelopmentStorage=true",
+    "AzureSignalRConnectionString": "Endpoint=https://maquaransignalr.service.signalr.net;AccessKey=Z9CspYyr2JCYvQQUYhELM0AQoHCcJnol878Sr04R64o=;",
+    "AzureCosmosDBConnectionString": "AccountEndpoint=https://maquaransignalr.documents.azure.com:443/;AccountKey=fo3BItkfYWWMLRVmDTk6WDT2iKb08A69uGkodQpPXQLfkSAPjAPSsVtzH8PqD8XbjMcSPJfDVbZUavW9K9NELg==;"
+  }
+}

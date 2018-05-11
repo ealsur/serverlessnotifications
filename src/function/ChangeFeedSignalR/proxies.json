@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json.schemastore.org/proxies",
+  "proxies": {
+    "chatproxy": {
+      "matchCondition": {
+        "route": "/api/savechat",
+        "methods": [
+          "POST"
+        ]
+      },
+      "backendUri": "https://%WEBSITE_HOSTNAME%/api/savechat"
+    },
+    "signalrConfiguration": {
+      "matchCondition": {
+        "route": "/api/signalrconfiguration",
+        "methods": [
+          "GET"
+        ]
+      },
+      "backendUri": "https://%WEBSITE_HOSTNAME%/api/signalrconfiguration"
+    },
+    "default": {
+      "matchCondition": {
+        "route": "{*path}",
+        "methods": [
+          "GET",
+          "OPTIONS"
+        ]
+      },
+      "backendUri": "https://%WEBSITE_HOSTNAME%/api/fileserver?file={path}"
+    }
+  }
+}
