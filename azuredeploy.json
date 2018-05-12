@@ -81,9 +81,7 @@
 			"name": "[variables('functionAppName')]",
 			"serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
 			"hostingEnvironment": "",
-			"clientAffinityEnabled": false,
 			"siteConfig": {
-				"alwaysOn": true,
 				"cors": {
 					"allowedOrigins": [
 						"*"
