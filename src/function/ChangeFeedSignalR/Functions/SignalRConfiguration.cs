@@ -15,7 +15,7 @@ namespace ChangeFeedSignalR
         /// This HttpTriggered function returns the SignalR configuration to the web client.
         /// </summary>
         [FunctionName("SignalRConfiguration")]
-        public static HttpResponseMessage Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)]HttpRequestMessage req, TraceWriter log)
+        public static HttpResponseMessage Run([HttpTrigger(AuthorizationLevel.Anonymous)]HttpRequestMessage req, TraceWriter log)
         {
             return req.CreateResponse(HttpStatusCode.OK, 
                 new {

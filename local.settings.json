@@ -1,9 +1,0 @@
-{
-    "IsEncrypted": false,
-  "Values": {
-    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
-    "AzureWebJobsDashboard": "UseDevelopmentStorage=true",
-    "AzureSignalRConnectionString": "<Insert-an-Azure-SignalR-ConnectionString>",
-    "AzureCosmosDBConnectionString": "<Insert-an-Azure-CosmosDB-ConnectionString>"
-  }
-}

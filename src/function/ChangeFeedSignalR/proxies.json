@@ -1,33 +1,54 @@
 {
     "$schema": "http://json.schemastore.org/proxies",
   "proxies": {
-    "chatproxy": {
+    "save": {
       "matchCondition": {
-        "route": "/api/savechat",
+        "route": "/api/save",
         "methods": [
           "POST"
         ]
       },
       "backendUri": "https://%WEBSITE_HOSTNAME%/api/savechat"
     },
-    "signalrConfiguration": {
+    "config": {
       "matchCondition": {
-        "route": "/api/signalrconfiguration",
+        "route": "/api/config",
         "methods": [
-          "GET"
+          "GET",
+          "OPTIONS"
         ]
       },
       "backendUri": "https://%WEBSITE_HOSTNAME%/api/signalrconfiguration"
     },
     "default": {
       "matchCondition": {
-        "route": "{*path}",
+        "route": "",
         "methods": [
           "GET",
           "OPTIONS"
         ]
       },
-      "backendUri": "https://%WEBSITE_HOSTNAME%/api/fileserver?file={path}"
+      "backendUri": "https://%WEBSITE_HOSTNAME%/api/fileserver?file=index.html"
+    },
+    "scripts": {
+      "matchCondition": {
+        "route": "scripts/{*path}",
+        "methods": [
+          "GET",
+          "OPTIONS"
+        ]
+      },
+      "backendUri": "https://%WEBSITE_HOSTNAME%/api/fileserver?file=scripts/{path}"
+    },
+    "styles": {
+      "matchCondition": {
+        "route": "css/{*path}",
+        "methods": [
+          "GET",
+          "OPTIONS"
+        ]
+      },
+      "backendUri": "https://%WEBSITE_HOSTNAME%/api/fileserver?file=css/{path}"
     }
   }
 }

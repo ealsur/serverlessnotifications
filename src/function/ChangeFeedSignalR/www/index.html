@@ -109,7 +109,7 @@
                     if (messageInput.value) {
                         $.ajax({
                             type: "POST",
-                            url: "/api/savechat",
+                            url: "/api/save",
                             data: JSON.stringify({ user: username, message: messageInput.value }),
                             contentType: "application/json; charset=utf-8",
                             dataType: "json"
@@ -139,7 +139,7 @@
             }
 
             var connection = null;
-            $.getJSON("/api/signalrconfiguration", function (data) {
+            $.get("/api/config", {},function (data) {
                 connection = new signalR.HubConnectionBuilder()
                     .withUrl(data.hubUrl, { accessTokenFactory: () => data.accessToken })
                     .build();
@@ -152,7 +152,7 @@
                         console.error(error.message);
                     });
 
-            });
+            }, 'json');
         });
     </script>
 </body>
