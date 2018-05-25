@@ -44,7 +44,7 @@
 		"cosmosDBConnectionString": {
 			"type": "string",
 			"metadata": {
-				"description": "Connection String for the Azure Cosmos DB account."
+				"description": "Connection String for the Azure Cosmos DB account with SQL API."
 			}
 		}
 	},
