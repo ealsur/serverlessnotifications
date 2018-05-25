@@ -37,7 +37,7 @@ This solution does not create any server instance on your subscription, it runs 
 
 ## Requirements
 
-1. Have a pre-existing **Azure Cosmos DB** account to obtain the **Connection String**.
+1. Have a pre-existing **Azure Cosmos DB** account to obtain the **Connection String**. REMARKS: the format of the connection string should be "Endpoint=https://{cosmosdb-name}.service.signalr.net;AccessKey={key};".
     1. Create a database called **chat** and a collection called **lines** (it can be the smallest possible 400RU collection).
 2. Have a pre-existing **Azure SignalR** account to obtain the **Connection String**.
 
